@@ -103,4 +103,4 @@ class SGDMLCalculator(Calculator):
         e *= self.E_to_eV
         f *= self.F_to_eV_Ang
 
-        self.results = {'energy': e, 'forces': f.reshape(-1, 3)}
+        self.results = {'energy': e, 'forces': f.reshape(-1, 3), 'stress': np.zeros(6)}
